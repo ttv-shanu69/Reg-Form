@@ -3,113 +3,465 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reg From</title>
+    <title>Reg Form</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
 </head>
 <body>
-   <div class="main_container">
-    <div class="main_container_flexin">
-
+    <div class="main_container">
         <div class="container">
-            <div class="in_container">
-                <h2 class="title">Name and Address &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
-            </div>
-            <div class="from_div">
-                <div class="text_div">
-                    <div class="text_form">
-                        <p>Do you use civiCRM?</p>
-                        <p>How long hav you been using &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; civiCRM?</p>
-                        <p>Which cms do you use?</p>
-                        <p>Your skill set</p>
-                        <p>Email *</p>
-                        <p>First Name *</p>
-                        <p>Last Name *</p>
-                        <br>
-                        <p>Street Address (Home)</p>
-                        <p>City (Home)</p>
-                        <p>Postal code (Home)</p>
-                        <p>Country (Home)</p>
-                        <br>
-                        <br>
-                        <br>
-                        <p>State (Home)</p>
+            <form action="" id="Formfill">
+                <div class="divQ1 c_div">
+                    <!-- Question -->
+                    <div class="Ques">
+                        <p id="yesss" class="ques_para">Do you use CiviCRM?</p>
                     </div>
-                </div>
-                <div class="input_div">
-                    <div class="input_forms">
-                        <input type="radio" id="yes" value="Yes" required>
+                    <!-- Answer -->
+                    <div class="Ans">                         
+                        <input type="radio" id="yes" name="newsletter" value="yes" required>
                         <label for="yes">Yes</label>
-                        <input type="radio" id="no" value="No" required>
+                        <input type="radio" id="no" name="newsletter" value="no">
                         <label for="no">No</label>
-                        <br>
-                        <br>
-                        <!-- Select-1 -->
-                        <select name="Select" id="sel">
-                            <option value="select1">- Select -</option>
-                            <option value="select2">Select</option>
-                            <option value="select3">Select</option>
-                        </select>
-    
-                        <!-- Select-2 -->
-                        <select name="Select" id="select" style="margin-top: 20px;">
-                            <option value="select1">- Select -</option>
-                            <option value="select2">Select</option>
-                            <option value="select3">Select</option>
-                        </select>
-    
-                        <!-- Select-3 -->
-                        <select name="Select" id="sel" style="margin-top: 10px; width: 200px;">
-                            <option value="select1">- Select -</option>
-                            <option value="select2">Select</option>
-                            <option value="select3">Select</option>
-                        </select>
-    
-                        <div class="inputs">
-                            <!-- Email-input -->
-                         <input type="text"><br>
-    
-                         <!-- Name-input -->
-                         <input type="text"><br>
-    
-                         <!-- Last name-input -->
-                         <input type="text"><br>
-                        </div>
-    
-                        <p id="para">First and last name will be shared with other visitors to the site.</p>
-    
-                        <div class="inputs-3">
-                            <!-- Email-input -->
-                         <input type="text" style="width: 280px;"><br>
-    
-                         <!-- Name-input -->
-                         <input type="text"><br>
-    
-                         <!-- Last name-input -->
-                         <input type="text" style="width: 105px;"><br>
-                        </div>
-    
-                        <select name="Select" id="select-2" style="margin-top: 6px;">
-                            <option value="select1">United States</option>
-                            <option value="select2">Select</option>
-                            <option value="select3">Select</option>
-                        </select>
-    
-                        <p id="last_para">Your state/province and country of residence will be shared with others so folks can find &nbsp; others in their community</p>
-    
-                        <select name="Select" id="select-3" style="margin-top: 12px;">
-                            <option value="select1">- Select -</option>
-                            <option value="select2">Select</option>
-                            <option value="select3">Select</option>
+
+                        <p>( <a href="#" id="unselect" onclick="clearSelection()">Unselect</a> )</p>
+                    </div>
+                </div>
+
+                <div class="divQ2 c_div">
+                    <!-- Question -->
+                    <div class="Ques">
+                        <label for="select1"><p class="ques_para">How long have you been using CiviCRM?</p></label>
+                    </div>
+                    <!-- Answer -->
+                    <div class="Ans_select">
+                        <select name="" id="select1" required>
+                            <option value="op1">-Select-</option>
+                            <option value="op1">Option1</option>
                         </select>
                     </div>
                 </div>
+
+                <div class="divQ3 c_div">
+                    <!-- Question -->
+                    <div class="Ques">
+                        <label for="select2"><p class="ques_para">Which CMS do you use?</p></label>
+                    </div>
+                    <!-- Answer -->
+                    <div class="Ans_select">
+                        <select name="" id="select2" required>
+                            <option value="op1">-Select-</option>
+                            <option value="op1">Option1</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="divQ4 c_div">
+                    <!-- Question -->
+                    <div class="Ques">
+                        <label for="select3"><p class="ques_para">Your skill set?</p></label>
+                    </div>
+                    <!-- Answer -->
+                    <div class="Ans_select">
+                        <select name="" id="select3" required>
+                            <option value="op1">-Select-</option>
+                            <option value="op1">Option1</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="emai_div c_div">
+                    <!-- Question -->
+                    <div class="Ques">
+                        <label for="Email"><p class="ques_para">Email *</p></label>
+                    </div>
+                    <!-- Answer -->
+                    <div class="Ans_select Ans_input">
+                        <input id="Email" type="email" name="email" placeholder="Email" required>
+                        <p class="error-message">Unvalid please give correct information.</p>
+                    </div>
+                </div>
+
+                <div class="f_name_div c_div div_3">
+                    <div class="emai_div c_div">
+                        <!-- Question -->
+                        <div class="Ques">
+                            <label for="first_name"><p class="ques_para">First Name *</p></label>
+                        </div>
+                        <!-- Answer -->
+                        <div class="Ans_select Ans_input">
+                            <input id="first_name" type="text" name="first_name" placeholder="First name" required>
+                            <p class="error-message">Unvalid please give correct information.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="l_name_div c_div div_3">
+                    <div class="emai_div c_div">
+                        <!-- Question -->
+                        <div class="Ques">
+                            <label for="lastname_input"><p class="ques_para">Last Name *</p></label>
+                        </div>
+                        <!-- Answer -->
+                        <div class="Ans_select Ans_input">
+                            <input type="text" id="lastname_input" name="last_name" placeholder="Last name" required>
+                            <p class="error-message">Unvalid please give correct information.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="emai_div c_div">
+                    <!-- Question -->
+                    <div class="Ques">
+                        <p class="ques_para"></p>
+                    </div>
+                    <!-- Answer -->
+                    <div class="Ans_select Ans_input">
+                        <p class="single_para">First and last name will be shared with others visitors to the site.</p>
+                    </div>
+                </div>
+
+                <div class="emai_div c_div">
+                    <!-- Question -->
+                    <div class="Ques">
+                        <label for="Address_input"><p class="ques_para">Street Address (Home)</p></label>
+                    </div>
+                    <!-- Answer -->
+                    <div class="Ans_select Ans_input">
+                        <input type="text" id="Address_input" name="address" placeholder="Street Address" required>
+                        <p class="error-message">Unvalid please give correct information.</p>
+                    </div>
+                </div>
+
+                <div class="emai_div c_div">
+                    <!-- Question -->
+                    <div class="Ques">
+                        <label for="City_input"><p class="ques_para">City (Home)</p></label>
+                    </div>
+                    <!-- Answer -->
+                    <div class="Ans_select Ans_input">
+                        <input type="text" id="City_input" name="city" placeholder="City" required>
+                        <p class="error-message">Unvalid please give correct information.</p>
+                    </div>
+                </div>
+
+                <div class="emai_div c_div">
+                    <!-- Question -->
+                    <div class="Ques">
+                       <label for="Code_input"> <p class="ques_para">Postal Code (Home)</p></label>
+                    </div>
+                    <!-- Answer -->
+                    <div class="Ans_select Ans_input">
+                        <input type="number" id="Code_input" name="code" placeholder="Postal Code" required>
+                        <p class="error-message">Unvalid please give correct information.</p>
+                    </div>
+                </div>
+
+                <div class="emai_div c_div">
+                    <!-- Question -->
+                    <div class="Ques">
+                        <label for="country_select"><p class="ques_para">Country (Home)</p></label>
+                    </div>
+                    <!-- Answer -->
+                    <div class="Ans_select Ans_input">
+                        <select name="" id="country_select">
+                            <option value="United States">United States</option>
+                            <option value="Pakistan">Pakistan</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="emai_div c_div">
+                    <!-- Question -->
+                    <div class="Ques">
+                        <p class="ques_para"></p>
+                    </div>
+                    <!-- Answer -->
+                    <div class="Ans_select Ans_input">
+                        <p class="single_para">Your state/province and country of residence will be shared with others so folks can find others in their community</p>
+                    </div>
+                </div>
+
+                <div class="emai_div c_div">
+                    <!-- Question -->
+                    <div class="Ques">
+                        <label for="State_select"><p class="ques_para">State (Home)</p></label>
+                    </div>
+                    <!-- Answer -->
+                    <div class="Ans_select Ans_input">
+                        <select name="" id="State_select">
+                            <option value="United States">-Select-</option>
+                            <option value="Pakistan">Option 1</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="end_buttons">
+                    <button type="submit" id="save_btn">Save</button>
+                    <button type="button" id="cancel_btn">Cancel</button>
+                </div>
+            </form>
+        </div>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Registration Successful!</p>
             </div>
         </div>
     </div>
-    <div class="end_buttons">
-        <button class="btn">save</button>
-        <button class="btn" style="margin-left: 20px;">cancel</button>
-    </div>
-   </div>
+
+    <style>
+
+* {
+    margin: 0;
+    padding: 0;
+}
+.main_container {
+    height: 900px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    height: 680px;
+    width: 1000px;
+    padding: 10px 15px;
+    color: #111;
+}
+.container input , select {
+    background: #EBDEE9;
+    border: 1.5px solid #ddd; /* Default neutral border color */
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+input[type="radio"] {
+    background-color: #EBDEE9;
+}
+.c_div {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+}
+.Ques {
+    width: 25%;
+}
+.Ans {
+    display: flex;
+    align-items: center;
+}
+.Ans label {
+    padding: 0 7px;
+}
+.Ans p {
+    font-size: 18px;
+    padding: 0 6px;
+}
+.ques_para {
+    font-size: 18px;
+    padding-right: 10px;
+}
+.Ans_select {
+    width: 75%;
+}
+.Ans_select select {
+    width: 20%;
+    border-radius: 8px;
+    padding: 2px 4px;
+}
+#select1 {
+    width: 180px;
+}
+#select2 {
+    width: 125px;
+}
+#select3 {
+    width: 155px;
+}
+.Ans_input input {
+    width: 23%;
+    border-radius: 8px;
+    padding: 5px 8px;
+}
+.div_3 {
+    margin-top: 0;
+}
+.single_para {
+    font-size: 19px;
+}
+#Address_input {
+    width: 35%;
+}
+#City_input {
+    width: 25%;
+}
+#Code_input {
+    width: 15%;
+    font-size: 12px;
+}
+#State_select {
+    width: 33%;
+    padding: 3px 5px;
+}
+#country_select {
+    width: 150px;
+}
+.end_buttons {
+    height: 90px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.end_buttons button {
+    color: #000;
+}
+#save_btn {
+    margin: 0 8px;
+    padding: 6px 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    background: #F8C0F3;
+}
+#cancel_btn {
+    margin: 0 8px;
+    padding: 6px 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    background: #F8C0F3;
+}
+.message {
+    display: none;
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    font-family: sans-serif;
+}
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.5); 
+    justify-content: center; 
+    align-items: center; 
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 10px;
+}
+.modal-content p {
+    font-size: 20px;
+    font-family: sans-serif;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.button-container {
+    margin-top: 10px;
+}
+input[type="text"],
+input[type="email"],
+input[type="number"]
+ {
+    border: 1.5px solid #ddd; /* Default neutral border color */
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+#unselect {
+    color: #131236;
+    font-family: sans-serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+#result {
+    color: red;
+    font-size: 17px;
+    letter-spacing: 1px;
+    font-family: sans-serif;
+    position: relative;
+}
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+    display: none; /* Initially hide the error message */
+}
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    transition: opacity 0.5s ease; /* Smooth transition */
+    opacity: 0;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    text-align: center;
+}
+
+.modal.show {
+    display: block;
+    opacity: 1; /* Full opacity when shown */
+}
+
+/* Close button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+    </style>
+
+    <script src="script.js"></script>
 </body>
 </html>
